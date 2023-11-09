@@ -1,4 +1,4 @@
-import random from "../../../../phaser-examples/src/games/-useful-stuff-/math/randomMinimumMaximum";
+// import random from "../../../../phaser-examples/src/games/-useful-stuff-/math/randomMinimumMaximum";
 
 export default function selectTeam(teamOneScore, teamTwoScore, teamOne, teamTwo, teamOneName, teamTwoName) {
     let team = ""
@@ -14,7 +14,7 @@ export default function selectTeam(teamOneScore, teamTwoScore, teamOne, teamTwo,
         } else if (teamTwoPlayers < teamOnePlayers) {
             team = teamTwoName
         } else if (teamOnePlayers == teamTwoPlayers) {
-            const randomNumber = random(1, 2)
+            const randomNumber = 1 + Math.random()
             if (randomNumber == 1) {
                 team = teamOneName
             } else if (randomNumber == 2) {

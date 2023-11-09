@@ -126,8 +126,8 @@ export default class GameEngine {
 
     addEnemyAI(sessionId) {
         const initialScore = 0
-        const x = random(100, this.mapWidth - 100)
-        const y = random(100, this.mapHeight - 100)
+        const x = 100 + Math.random() * (this.mapWidth - 200)
+        const y = 100 + Math.random() * (this.mapHeight - 200)
         const size = 35
 
         const team = "AI"
@@ -146,10 +146,10 @@ export default class GameEngine {
     }
 
     generateBarricade() {
-        const x = random(350, this.mapWidth - 350)
-        const y = random(350, this.mapHeight - 350)
-        const width = random(150, 250)
-        const height = random(150, 250)
+        const x = 350 + Math.random() * (this.mapWidth - 700)
+        const y = 350 + Math.random() * (this.mapHeight - 700)
+        const width = 150 + Math.random() * 100
+        const height = 150 + Math.random() * 100
 
         const barricade = Matter.Bodies.rectangle(x, y, width, height, { isStatic: true, label: "barricade" })
         this.state.createBarricade(barricade.id, x, y, width, height)
@@ -205,7 +205,7 @@ export default class GameEngine {
         }
 
         if (equalAmountPlayersTeams.length > 1) {
-            newTeamName = equalAmountPlayersTeams[random(0, equalAmountPlayersTeams.length - 1)].teamName
+            newTeamName = equalAmountPlayersTeams[Math.random() * equalAmountPlayersTeams.length].teamName
         }
 
 
@@ -319,7 +319,7 @@ export default class GameEngine {
 
     summonArenaClosers() {
         for (const key in this.players) {
-            c
+            // TODO
         }
     }
 

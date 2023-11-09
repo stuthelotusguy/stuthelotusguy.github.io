@@ -1,4 +1,4 @@
-import random from "../../../../phaser-examples/src/games/-useful-stuff-/math/randomMinimumMaximum"
+// import random from "../../../../phaser-examples/src/games/-useful-stuff-/math/randomMinimumMaximum"
 
 export default function selectTeam(amountOfTeams, teamObjects) {
     let newTeamName = ""
@@ -49,7 +49,7 @@ export default function selectTeam(amountOfTeams, teamObjects) {
     }
 
     if (equalAmountPlayersTeams.length > 1) {
-        newTeamName = equalAmountPlayersTeams[random(0, equalAmountPlayersTeams.length - 1)].teamName
+        newTeamName = equalAmountPlayersTeams[Math.random() * equalAmountPlayersTeams.length].teamName
     }
 
 
